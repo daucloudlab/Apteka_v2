@@ -43,11 +43,10 @@ public class AptekaListFragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-//                String pid = ((TextView) view.findViewById(R.id.pid)).getText().toString();
-//                Intent intent = new Intent(getApplicationContext(), AptekaDetailActivity.class);
-//                intent.putExtra("pid", pid);
-//                startActivity(intent);
-//                finish();
+                String pid = ((TextView) view.findViewById(R.id.pid)).getText().toString();
+                Intent intent = new Intent(getActivity(), AptekaDetailActivity.class);
+                intent.putExtra("pid", pid);
+                startActivity(intent);
             }
         });
 

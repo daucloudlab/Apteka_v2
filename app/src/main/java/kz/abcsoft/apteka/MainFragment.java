@@ -66,12 +66,12 @@ public class MainFragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-//                String stringAID = ((TextView)view.findViewById(R.id.apteka_id)).getText().toString() ;
-//                String stringMID = ((TextView)view.findViewById(R.id.medikament_id)).getText().toString() ;
-//                Intent medikamentDetailIntent = new Intent(getActivity(), MedikamentDetailActivity.class) ;
-//                medikamentDetailIntent.putExtra("pid", stringAID) ;
-//                medikamentDetailIntent.putExtra("mid", stringMID) ;
-//                startActivity(medikamentDetailIntent);
+                String stringAID = ((TextView)view.findViewById(R.id.apteka_id)).getText().toString() ;
+                String stringMID = ((TextView)view.findViewById(R.id.medikament_id)).getText().toString() ;
+                Intent medikamentDetailIntent = new Intent(getActivity(), MedikamentDetailActivity.class) ;
+                medikamentDetailIntent.putExtra("pid", stringAID) ;
+                medikamentDetailIntent.putExtra("mid", stringMID) ;
+                startActivity(medikamentDetailIntent);
             }
         });
 
