@@ -13,7 +13,7 @@
 
     <string name = "nav_menu_item_apteki">Аптеки</string>
     <string name = "nav_menu_item_near_apteki">Карта аптек</string>
-    <string name = "nav_menu_item_search_medikament">Новости</string>
+    <string name = "nav_menu_item_search_medikament">Медикаменты</string>
     <string name="title_activity_maps">Карта аптек</string>
 
 </resources>

@@ -29,34 +29,35 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        initToolbar();
+        toolbar = (Toolbar)findViewById(R.id.main_toolbar) ;
+        toolbar.setTitle(R.string.main_toolbar_title);
         initNavigationDrawer();
 
         fm.beginTransaction().add(R.id.main_activity_container, new MainFragment()).commit() ;
     }
 
 
-    private void initToolbar(){
-        toolbar = (Toolbar)findViewById(R.id.main_toolbar) ;
-        toolbar.setTitle(R.string.main_toolbar_title);
+//    private void initToolbar(){
+//        toolbar = (Toolbar)findViewById(R.id.main_toolbar) ;
+//        toolbar.setTitle(R.string.main_toolbar_title);
 
-        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                int id = item.getItemId() ;
+//        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+//            @Override
+//            public boolean onMenuItemClick(MenuItem item) {
+//                int id = item.getItemId() ;
 //                if(id == R.id.to_apteks_list) {
 //                    Intent to_apteks_list_intent = new Intent(MainActivity.this, AptekaListActivity.class);
 //                    startActivity(to_apteks_list_intent);
 //                    finish() ;
 //                    return true ;
 //                }
-                return false;
-            }
-        });
+//                return false;
+//            }
+//        });
 
-        toolbar.inflateMenu(R.menu.toolbar_menu) ;
+//        toolbar.inflateMenu(R.menu.toolbar_menu) ;
 
-    }
+//    }
 
     private void initNavigationDrawer(){
 
@@ -99,12 +100,16 @@ public class MainActivity extends AppCompatActivity {
                             case 1:
                                 fm.beginTransaction().replace(R.id.main_activity_container, new AptekaListFragment())
                                         .commit() ;
+                                toolbar.setTitle(R.string.search_apteks_title);
                                 return false ;
                             case 2:
 //                                Intent intent2 = new Intent(MainActivity.this, MapsActivity.class) ;
 //                                startActivity(intent2);
 //                                return true ;
                             case 3:
+                                fm.beginTransaction().replace(R.id.main_activity_container,new MainFragment())
+                                        .commit() ;
+                                toolbar.setTitle(R.string.main_toolbar_title);
                                 return false ;
                         }
                         return false ;

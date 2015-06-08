@@ -7,7 +7,6 @@
         android:id = "@+id/to_apteks_list"
         android:title = "@string/search_apteks_title"
         android:orderInCategory="1"
-        android:icon="@drawable/ic_clinic_room_24"
         app:showAsAction = "ifRoom" />
 
 
