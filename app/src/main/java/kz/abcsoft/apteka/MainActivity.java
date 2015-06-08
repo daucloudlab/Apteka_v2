@@ -23,7 +23,7 @@ import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 public class MainActivity extends AppCompatActivity {
 
     Toolbar toolbar ;
-
+    FragmentManager fm = getSupportFragmentManager();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
         initToolbar();
         initNavigationDrawer();
 
-        FragmentManager fm = getSupportFragmentManager() ;
         fm.beginTransaction().add(R.id.main_activity_container, new MainFragment()).commit() ;
     }
 
@@ -98,9 +97,9 @@ public class MainActivity extends AppCompatActivity {
 
                         switch (iDrawerItem.getIdentifier()) {
                             case 1:
-//                                Intent intent1 = new Intent(MainActivity.this, AptekaListActivity.class) ;
-//                                startActivity(intent1);
-//                                return true ;
+                                fm.beginTransaction().replace(R.id.main_activity_container, new AptekaListFragment())
+                                        .commit() ;
+                                return false ;
                             case 2:
 //                                Intent intent2 = new Intent(MainActivity.this, MapsActivity.class) ;
 //                                startActivity(intent2);
