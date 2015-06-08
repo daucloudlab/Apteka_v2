@@ -46,33 +46,13 @@ public class MainActivity extends AppCompatActivity {
 
         toolbar = (Toolbar)findViewById(R.id.main_toolbar) ;
         toolbar.setTitle(R.string.main_toolbar_title);
+
         initNavigationDrawer();
 
         fm.beginTransaction().add(R.id.main_activity_container, new MainFragment()).commit() ;
     }
 
 
-//    private void initToolbar(){
-//        toolbar = (Toolbar)findViewById(R.id.main_toolbar) ;
-//        toolbar.setTitle(R.string.main_toolbar_title);
-
-//        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
-//            @Override
-//            public boolean onMenuItemClick(MenuItem item) {
-//                int id = item.getItemId() ;
-//                if(id == R.id.to_apteks_list) {
-//                    Intent to_apteks_list_intent = new Intent(MainActivity.this, AptekaListActivity.class);
-//                    startActivity(to_apteks_list_intent);
-//                    finish() ;
-//                    return true ;
-//                }
-//                return false;
-//            }
-//        });
-
-//        toolbar.inflateMenu(R.menu.toolbar_menu) ;
-
-//    }
 
     private void initNavigationDrawer(){
 

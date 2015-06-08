@@ -9,7 +9,7 @@
     <EditText android:id="@+id/input_medikament_search"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:hint="поиск медикаментов" />
+        android:hint="введите название медикамента" />
 
     <ListView
         android:id="@+id/medikaments_list"

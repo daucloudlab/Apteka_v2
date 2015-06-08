@@ -74,8 +74,8 @@ public class AptekaDetailActivity extends AppCompatActivity {
 
     private void initAptekDetailToolbar(Toolbar toolbar, String title, final String addresses){
         toolbar = (Toolbar)findViewById(R.id.apteka_detail_toolbar) ;
-        toolbar.setTitle("Медикаменты " + title);
-//        toolbar.setNavigationIcon(R.drawable.previous_24);
+        toolbar.setTitle(title);
+        toolbar.setNavigationIcon(R.drawable.previous_24);
 
         toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
@@ -102,14 +102,14 @@ public class AptekaDetailActivity extends AppCompatActivity {
             }
         });
 
-//        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent toListApteks = new Intent(getApplicationContext(), .class);
-//                startActivity(toListApteks);
-//
-//            }
-//        });
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent toMedikamentsList = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(toMedikamentsList);
+
+            }
+        });
 
         toolbar.inflateMenu(R.menu.apteka_detail_menu) ;
 
