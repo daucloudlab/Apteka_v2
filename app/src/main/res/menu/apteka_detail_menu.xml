@@ -14,7 +14,8 @@
         android:id = "@+id/get_addresses"
         android:title = "@string/get_addresses_title"
         android:orderInCategory="2"
-        app:showAsAction = "never" />
+        android:icon = "@drawable/ic_clinic_room_24"
+        app:showAsAction = "ifRoom" />
 
     <!--<item
         android:id = "@+id/get_phones"

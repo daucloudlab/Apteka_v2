@@ -1,6 +1,10 @@
 package kz.abcsoft.apteka;
 
+import android.content.Context;
 import android.content.Intent;
+import android.location.Criteria;
+import android.location.Location;
+import android.location.LocationManager;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -11,6 +15,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.CameraPosition;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.accountswitcher.AccountHeader;
@@ -18,6 +31,8 @@ import com.mikepenz.materialdrawer.accountswitcher.AccountHeaderBuilder;
 import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
+
+import kz.abcsoft.apteka.map.MapsActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -90,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
                         new PrimaryDrawerItem()
                                 .withName(R.string.nav_menu_item_search_medikament)
                                 .withIdentifier(3)
-                                .withIcon(R.drawable.google_news_24)
+                                .withIcon(R.drawable.ic_pill_24)
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
@@ -99,25 +114,25 @@ public class MainActivity extends AppCompatActivity {
                         switch (iDrawerItem.getIdentifier()) {
                             case 1:
                                 fm.beginTransaction().replace(R.id.main_activity_container, new AptekaListFragment())
-                                        .commit() ;
+                                        .commit();
                                 toolbar.setTitle(R.string.search_apteks_title);
-                                return false ;
+                                return false;
                             case 2:
-//                                Intent intent2 = new Intent(MainActivity.this, MapsActivity.class) ;
-//                                startActivity(intent2);
-//                                return true ;
+                                Intent intent2 = new Intent(MainActivity.this, MapsActivity.class) ;
+                                startActivity(intent2);
+
+                                return false;
                             case 3:
-                                fm.beginTransaction().replace(R.id.main_activity_container,new MainFragment())
-                                        .commit() ;
+                                fm.beginTransaction().replace(R.id.main_activity_container, new MainFragment())
+                                        .commit();
                                 toolbar.setTitle(R.string.main_toolbar_title);
-                                return false ;
+                                return false;
                         }
-                        return false ;
+                        return false;
                     }
                 })
                 .build() ;
     }
-
 
 
     @Override

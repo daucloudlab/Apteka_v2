@@ -75,7 +75,7 @@ public class AptekaDetailActivity extends AppCompatActivity {
     private void initAptekDetailToolbar(Toolbar toolbar, String title, final String addresses){
         toolbar = (Toolbar)findViewById(R.id.apteka_detail_toolbar) ;
         toolbar.setTitle("Медикаменты " + title);
-        toolbar.setNavigationIcon(R.drawable.previous_24);
+//        toolbar.setNavigationIcon(R.drawable.previous_24);
 
         toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override

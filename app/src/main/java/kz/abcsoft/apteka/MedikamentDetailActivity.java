@@ -20,6 +20,7 @@ public class MedikamentDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medikament_detail);
         Toolbar toolbar = (Toolbar)findViewById(R.id.activity_medikament_detail_toolbar) ;
+        toolbar.setTitle(R.string.medikament_detail_toolbar_title);
 //        toolbar.setNavigationIcon(R.drawable.previous_24);
 //        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
 //            @Override
