@@ -3,6 +3,7 @@ package kz.abcsoft.apteka.adapter;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
 
 import kz.abcsoft.apteka.categoryfragments.Fragment1;
 import kz.abcsoft.apteka.categoryfragments.Fragment2;
@@ -14,7 +15,7 @@ import kz.abcsoft.apteka.categoryfragments.Fragment7;
 import kz.abcsoft.apteka.categoryfragments.Fragment8;
 
 
-public class TabsPagerAdapter extends FragmentPagerAdapter {
+public class TabsPagerAdapter extends FragmentStatePagerAdapter {
     String [] tabsName = new String[] {
             "Лекарственные препараты",
             "Травы, фито чаи",
