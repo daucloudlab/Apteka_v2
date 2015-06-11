@@ -15,7 +15,7 @@ import kz.abcsoft.apteka.categoryfragments.Fragment7;
 import kz.abcsoft.apteka.categoryfragments.Fragment8;
 
 
-public class TabsPagerAdapter extends FragmentStatePagerAdapter {
+public class TabsPagerAdapter extends FragmentPagerAdapter {
     String [] tabsName = new String[] {
             "Лекарственные препараты",
             "Травы, фито чаи",
