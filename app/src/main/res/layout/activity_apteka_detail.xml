@@ -33,11 +33,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="top"
         android:background="@color/colorPrimary"
-        android:textSize = "18dp">
+        android:textSize = "20dp" >
     </android.support.v4.view.PagerTabStrip>
 
     <!-- android:layout_height = "?attr/actionBarSize" -->
-
+    <!-- android:textAppearance = "?android:attr/textAppearanceLarge" -->
 </android.support.v4.view.ViewPager>
 
 </LinearLayout>
